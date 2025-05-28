@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Forex Investment Platform</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+<header>
+  <h1>Forex Investment Platform</h1>
+  <div class="header-right">
+    <div class="notification"><i class="fas fa-bell"></i></div>
+    <div class="avatar"><img src="assets/user.jpg" alt="User"></div>
+  </div>
+</header>
+<div class="sidebar">
+  <h3>Menu</h3>
+  <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+  <a href="#"><i class="fas fa-chart-line"></i> Investments</a>
+  <a href="#"><i class="fas fa-wallet"></i> Deposits</a>
+  <a href="#"><i class="fas fa-user"></i> Profile</a>
+</div>
+<div class="main-content">
+  <h2>User Dashboard</h2>
+  <div id="deposits"><strong>Loading deposits...</strong></div>
+</div>
+</body>
+</html>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.createElement('div');
+  toggle.className = 'toggle-theme';
+  toggle.innerHTML = '<i class="fas fa-adjust"></i>';
+  document.body.appendChild(toggle);
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+  });
+
+  // Simulated loader
+  const loader = document.createElement('div');
+  loader.className = 'loader';
+  document.body.appendChild(loader);
+  setTimeout(() => loader.remove(), 1000); // auto-remove after 1s
+});
+</script>
