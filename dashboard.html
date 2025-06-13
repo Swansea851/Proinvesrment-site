@@ -1,0 +1,117 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard - Forex Investment Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">ForexInvest</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <h2>Welcome, <span id="userNameDisplay">Investor</span>!</h2>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Wallet Balance</h3>
+        <p>$<span id="walletBalance">1500</span></p>
+        <button onclick="alert('Coming Soon')">Withdraw</button>
+      </div>
+
+      <div class="card">
+        <h3>Active Investment</h3>
+        <p>Plan: <strong>Standard</strong></p>
+        <p>Profit: <strong>$300</strong></p>
+        <button onclick="alert('Deposit functionality coming soon')">Deposit More</button>
+      </div>
+
+      <div class="card">
+        <h3>Your Referral Code</h3>
+        <input type="text" value="yourcode123" id="refCode" readonly />
+        <button onclick="copyCode()">Copy</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="transactions">
+  <h2>Recent Transactions</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-06-10</td>
+          <td>Deposit</td>
+          <td>$1000</td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>2025-06-12</td>
+          <td>Profit</td>
+          <td>$300</td>
+          <td>Credited</td>
+        </tr>
+        <tr>
+          <td>2025-06-13</td>
+          <td>Withdrawal</td>
+          <td>$500</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2016 Forex Investment Platform. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const user = 
+    JSON.parse(localStorage,getItem("current user"))
+    if (!user || !user .approved){
+        alert("Access denied. you must be approved to access the daschboard."); 
+        window.location.href = "login.html"; 
+    }
+
+    // User Auth Check
+if (localStorage.getItem("isUser") !== "true") 
+  alert("Please log in to continue.");
+  window.location.href = "login.html";
+
+    function copyCode() {
+      const refInput = document.getElementById("refCode");
+      refInput.select();
+      document.execCommand("copy");
+      alert("Referral code copied!");
+    }
+function logout() {
+  localStorage.removeItem("isUser");
+  alert("Logged out.");
+  window.location.href = "login.html";
+}
+  const user = JSON.parse(localStorage.getItem("currentUser"));
+  if (user) {
+    document.getElementById("userNameDisplay").textContent = user.name;
+  }
+
+  </script>
+</body>
+</html>

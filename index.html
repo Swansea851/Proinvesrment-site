@@ -1,0 +1,135 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forex Investment Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">ForexInvest</div>
+      <ul class="nav-links">
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#referral">Referral</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="admin-signup.html">admin Sign-Up</a></li>
+        <li><a href="login.html" class="btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Grow Your Wealth with Confidence</h1>
+      <p>Secure, Smart, and Sustainable Forex Investments for Long-Term Gains.</p>
+      <a href="signup.html" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div>
+        <h3>Real-Time Profits</h3>
+        <p>Track your investments and returns live, anytime.</p>
+      </div>
+      <div>
+        <h3>Secure Platform</h3>
+        <p>Your data and funds are protected with top-tier encryption.</p>
+      </div>
+      <div>
+        <h3>Flexible Plans</h3>
+        <p>Choose from beginner to expert-level investment packages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" class="plans">
+    <h2>Investment Plans</h2>
+    <div class="plan-cards">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p>Min: $100 | Max: $999</p>
+        <p>7% ROI / 7 days</p>
+        <a href="signup.html" class="btn">Invest Now</a>
+      </div>
+      <div class="plan">
+        <h3>Standard</h3>
+        <p>Min: $1000 | Max: $4999</p>
+        <p>10% ROI / 14 days</p>
+        <a href="signup.html" class="btn">Invest Now</a>
+      </div>
+      <div class="plan">
+        <h3>Premium</h3>
+        <p>Min: $5000+</p>
+        <p>15% ROI / 30 days</p>
+        <a href="signup.html" class="btn">Invest Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="referral" class="referral">
+    <h2>Referral System</h2>
+    <p>Earn up to 5% commission for every new user you refer. Share your unique referral code and grow your passive income!</p>
+    <a href="signup.html?ref=yourcode" class="btn-secondary">Join and Refer</a>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Investors Say</h2>
+    <div class="testimony-list">
+      <div>
+        <p>"Amazing returns and great customer service. Highly recommended!"</p>
+        <strong>— Sarah O.</strong>
+      </div>
+      <div>
+        <p>"Reliable and fast payouts. I've doubled my investment already."</p>
+        <strong>— James A.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>FAQs</h2>
+    <div class="faq-list">
+      <details>
+        <summary>How do I start investing?</summary>
+        <p>Create an account, select a plan, and fund your wallet.</p>
+      </details>
+      <details>
+        <summary>How do I withdraw profits?</summary>
+        <p>Withdrawals are processed within 24 hours after plan maturity.</p>
+      </details>
+      <details>
+        <summary>Is my investment safe?</summary>
+        <p>Yes, we use encrypted protocols and maintain liquidity reserves.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Forex Investment Platform. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! We’ll get back to you shortly.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

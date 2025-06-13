@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Forex Investment Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="admin-sidebar">
+  <h3>Admin Menu</h3>
+  <ul>
+    <li><a href="admin.html">Dashboard</a></li>
+    <li><a href="admin-profile.html">Profile</a></li>
+    <li><a href="#" onclick="logout()">Logout</a></li>
+  </ul>
+</div>
+
+      <div class="logo">Admin Panel</div>
+      <ul class="nav-links">
+        <li><a href="admin.html">Overview</a></li>
+        <li><a 
+            href="admin.profile.html">Profile</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <h2>Admin Dashboard</h2>
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Total Users</h3>
+        <p>132</p>
+      </div>
+      <div class="card">
+        <h3>Total Deposits</h3>
+        <p>$45,200</p>
+      </div>
+      <div class="card">
+        <h3>Total Withdrawals</h3>
+        <p>$18,400</p>
+      </div>
+      <div class="card">
+        <h3>Pending Withdrawals</h3>
+        <p>$1,200</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="transactions">
+    <h2>Pending Withdrawal Requests</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Amount</th>
+            <th>Wallet</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>john@example.com</td>
+            <td>$500</td>
+            <td>Wallet123XYZ</td>
+            <td>
+              <button onclick="alert('Approved!')">Approve</button>
+              <button onclick="alert('Rejected!')">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td>mary@example.com</td>
+            <td>$700</td>
+            <td>Wallet456ABC</td>
+            <td>
+              <button onclick="alert('Approved!')">Approve</button>
+              <button onclick="alert('Rejected!')">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Forex Investment Platform. Admin Console</p>
+  </footer>
+
+  <script>
+    function logout() {
+      alert("Logging out...");
+      window.location.href = "login.html";
+    }
+    function logout() {
+  localStorage.removeItem("isAdmin");
+  alert("Logged out.");
+  window.location.href = "admin-login.html";
+}
+
+    // Admin Auth Check
+if (localStorage.getItem("isAdmin") !== "true") {
+  alert("Access denied. Redirecting to login...");
+  window.location.href = "admin-login.html";
+}
+
+  </script>
+</body>
+</html>

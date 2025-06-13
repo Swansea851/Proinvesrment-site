@@ -1,0 +1,351 @@
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  background-color: #1e1e2f;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.login-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.login-link a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+header {
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links .btn {
+  background: #28a745;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1554224154-22dec7ec8818?fit=crop&w=1600&q=80') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero .btn-primary {
+  background: #1abc9c;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about, .plans, .referral, .testimonials, .faq, .contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.features, .plan-cards, .testimony-list, .faq-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2rem;
+}
+
+.plan {
+  background: #1e1e2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #fff;
+}
+.plan .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.referral {
+  background: #0e2733;
+  color: white;
+}
+.referral .btn-secondary {
+  background: #1abc9c;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.faq-list details {
+  background: #1e1e2f;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+.contact input, .contact textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.contact button {
+  background: #1abc9c;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.dashboard {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.dashboard h2 {
+  margin-bottom: 2rem;
+}
+.dashboard-cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.card {
+  background: #1e1e2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: white;
+}
+.card p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+.card input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+}
+.card button {
+  margin-top: 1rem;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.card button:hover {
+  background: #17a389;
+}
+
+.transactions {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.transactions h2 {
+  margin-bottom: 1.5rem;
+}
+.table-container {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  border-collapse: collapse;
+  background: #1e1e2f;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+table th, table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+table th {
+  background: #111;
+}
+table tr:hover {
+  background-color: #2a2a3d;
+}
+
+.profile {
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: auto;
+  color: white;
+}
+
+.profile h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background: #2c2c3d;
+  color: white;
+}
+
+form button {
+  background: #1abc9c;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #17a389;
+}
+
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #1e1e2f;
+  padding: 2rem 1rem;
+  color: white;
+}
+
+.admin-sidebar h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-sidebar li {
+  margin: 1.2rem 0;
+}
+
+.admin-sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  margin-left: 220px; /* Prevent sidebar overlap */
+}
